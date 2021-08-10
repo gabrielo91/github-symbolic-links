@@ -23,10 +23,10 @@ function readFile(path) {
   }
 }
 
-const PATH = "folder/innerFolder1/innerFolder2/test.txt";
+// const PATH = "folder/innerFolder1/innerFolder2/test.txt";
 
-readFile(PATH);
-writeToFile(PATH);
+// readFile(PATH);
+// writeToFile(PATH);
 
 module.exports = {
   readFile,

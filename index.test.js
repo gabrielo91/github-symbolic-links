@@ -5,8 +5,8 @@ describe("testing read/write files on common files", () => {
   const NESTED_PATH = "testFolder/inner1/inner2/test.txt";
 
   beforeAll(() => {
-    writeToFile(ROOT_PATH, { flag: "w+" }, "");
-    writeToFile(NESTED_PATH, { flag: "w+" }, "");
+    writeToFile(ROOT_PATH, { flag: "w+" }, "-");
+    writeToFile(NESTED_PATH, { flag: "w+" }, "-");
   });
 
   it("should write in root folder", () => {
@@ -34,6 +34,11 @@ describe("testing read/write files on common files", () => {
 describe("testing read/write files on symbolic links files", () => {
   const ROOT_PATH = "testSymbolic.txt";
   const NESTED_PATH = "nested-test.txt";
+
+  beforeAll(() => {
+    writeToFile(ROOT_PATH, { flag: "w+" }, "-");
+    writeToFile(NESTED_PATH, { flag: "w+" }, "-");
+  });
 
   it("should write in root folder", () => {
     expect(() =>
